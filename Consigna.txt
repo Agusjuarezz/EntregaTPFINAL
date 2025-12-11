@@ -1,0 +1,39 @@
+Consigna
+
+Objetivo: Evaluar la calidad del aire y su relación con condiciones climáticas y población.
+
+Limpieza de datos:
+
+Asegurarse de que las fechas estén en formato datetime.
+
+Eliminar outliers en concentraciones de gases.
+
+Crear un índice de calidad del aire (AQI simplificado).
+
+Análisis exploratorio con Python:
+
+Calcular promedios mensuales de cada contaminante.
+
+Analizar correlación entre temperatura, humedad y contaminación.
+
+Determinar qué ciudades superan los niveles recomendados por la OMS.
+
+Visualización:
+
+sns.lineplot() para evolución temporal de PM2.5.
+
+sns.heatmap() para correlación entre contaminantes y clima.
+
+sns.barplot() con ranking de ciudades más contaminadas.
+
+Power BI:
+
+Dashboard con mapa y ranking AQI promedio por país.
+
+Gráfico temporal de contaminación y temperatura.
+
+Conclusiones:
+
+¿Qué factores influyen más en la contaminación?
+
+¿Qué ciudades requieren medidas urgentes?
