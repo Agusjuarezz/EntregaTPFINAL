@@ -5,10 +5,7 @@ import seaborn as sns
 
 df = pd.read_csv("city_air_quality.csv")
 
-# Corrección de Temperature
-df["Temperature"] = pd.to_numeric(df["Temperature"], errors="coerce")
-if df["Temperature"].median() < 5:
-    df["Temperature"] = df["Temperature"] * 10
+
 
 print("Temperatura corregida (describe):")
 print(df["Temperature"].describe())
@@ -19,6 +16,11 @@ df["Date"] = pd.to_datetime(df["Date"])
 # Limpieza de outliers (IQR)
 pollutants = ["PM2.5","PM10","NO2","SO2","CO","O3"]
 df_clean = df.copy()
+
+# Corrección de Temperature
+df["Temperature"] = pd.to_numeric(df["Temperature"], errors="coerce")
+if df["Temperature"].median() < 5:
+    df["Temperature"] = df["Temperature"] * 10
 
 for col in pollutants:
     Q1 = df_clean[col].quantile(0.25)
